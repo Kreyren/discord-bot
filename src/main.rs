@@ -13,7 +13,7 @@ use discord::model::Event;
 pub fn main() {
 	// Log in to Discord using a bot token from the environment
 	let discord = Discord::from_bot_token(
-		&env::var("TOKEN").expect("Expected token"),
+		&env::var("DISCORD_TOKEN").expect("Expected token"),
 	).expect("login failed");
 
 	// establish websocket and voice connection
